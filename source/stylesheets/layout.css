@@ -1,116 +1,88 @@
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =================================
   Base Styles
 ==================================== */
 
-
-.hamburger {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-
-}
-
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-
-
-
-* {
-	box-sizing: border-box;
-}
 body {
 	font-size: 1.35em;
 	font-family: 'Varela Round', sans-serif;
 	color: #fff;
-	background: #e8e9e9;
-	padding-left: 2%;
-	padding-right: 2%;
+	background: #f2fffb;
+  height: 2000px;
+
+
 }
+
+
 
 ul {
 	list-style-type: none;
 }
 
+
 p {
 	color: black;
 }
 
-.content{
-	margin-top: 75px;
-	padding-right: 20%;
-	margin-bottom: 20%;
-}
 
 
-background {
-	width: 100%;
-
-}
 
 a {
 	text-decoration: none;
 
 }
 
-
-
+/*====================================
+Video Stying
+=====================================*/
 	.videoWrapper {
-		position: relative;
 		padding-bottom: 56.25%; /* 16:9 */
 		padding-top: 25px;
 		height: 0;
 	}
-	.videoWrapper iframe {
-		position: absolute;
+
+  .videoWrapper iframe {
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -118,26 +90,21 @@ a {
 	}
 
 
-
-
-/* =================================
-  Base Layout Styles
-==================================== */
-
-
+/*====================================
+Nav Bar Styling
+=====================================*/
 .main-nav a {
 	text-align: center;
-	display: block;
-	padding: 10px 15px;
-
 }
 
 .main-nav a, .name a, .key-concepts a{
-	font-size: 100%;
-	padding-bottom: 2px;
+	font-size: .75em;
 	color: #da3e3e;
 	text-transform: uppercase;
+  color: white;
 
+  padding: 15px;
+  padding-top: 15px;
 }
 a:hover,
 .nav-button:hover  {
@@ -145,86 +112,120 @@ a:hover,
 
 }
 
-.nav-container a {
-	font-size: .95em;
-	color: #3acec2;
-	text-transform: uppercase;
+.main-nav div {
+  float: right;
 }
 
-
-/* ---- Containers ---- */
-
-
-
-
-.main-nav {
-	color: #3db5da;
-}
-
-.nav-container, .key-concepts{
-	margin-left: -5px;
-	margin-right: -5px;
-  border-radius: 5px;
-
-	margin-top: 1px;
-	margin-bottom: 1px;
-  height: 25vh;
+.main-nav div:first-child {
+  float: left;
 }
 
 
 
-
-
-
-/*---------------------- Dividers ---------------------*/
-
-.key-concepts{
-	margin-top: 20px;
-
-	vertical-align: middle;
-
+#home {
+	font-weight: bold;
 }
 
-.banner{
-background-image: url("/images/dish.jpg");
-opacity: 0.85;
-background-position:center;
-background-size:cover;
-color: #fff;
-text-align: center;
-height: 50vh;
-vertical-align: middle;
-line-height: 50vh;
-margin-bottom: .5em;
-border-radius: 5px;
-margin-top: .5em;
-
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    height: 50px;
+    line-height: 50px;
 }
 
 
-.content-divider {
-	text-align:center;
-	background-image: url("/images/lightbulbblk.jpg");
-	opacity: 0.85;
-	background-size: cover;
-	background-position: right;
 
-	height: 50vh;
-	vertical-align: middle;
-	line-height: 50vh;
+/* Style the navbar links */
 
-	color: #fff;
-	padding: 15px;
+#navbar a:hover {
+    color: #ddd;
+    color: black;
+    text-align: center;
 
+}
+/*====================================
+Sidenav styling
+=====================================*/
 
-	border-radius: 5px;
-  text-align: center;
+  .hamburger{
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 5px;
 
 }
 
-.headline{
-	margin: 0;
+.sideicon{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:#f2fffb;
 }
+
+@media (max-width:769px){
+     .main-nav {
+       display:none;   }
+
+}
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    @media  (min-width: 769px){
+      .hamburger{
+        display: none;}
+    }
+
+    header {
+    	height: 60vh;
+
+      color: black;
+      background-color: red;
+      text-align: center;
+      line-height: 60vh;
+
+      font-size-adjust: auto;
+    }
 
 .main-footer {
 	text-align: center;
@@ -238,142 +239,3 @@ margin-top: .5em;
 
 
 /* ----------- Items -------------------*/
-
-.nav-button{
-	color: #fff;
-	padding: 15px;
-	margin: 5px;
-	border-radius: 5px;
-  text-align: center;
-}
-
-
-/*-------------- Nav Buttons ---------------*/
-#current-unit-button{
-	background-color: #d62929;
-}
-
-#past-quarters-button{
-	background-color: #c12525;
-}
-
-#key-concepts-button{
-	background-color: #ab2121;
-
-}
-
-/*-------------- Key Concept Buttons ---------------*/
-
-
-#momentum-button{
-	background-color: #1a75ff;
-}
-
-#force-button{
-	background-color:#1a75fd;
-	background-position: center;
-	background-size: cover;
-
-}
-
-#inertia-button{
-	background-color:#005ce6;
-
-}
-
-#newtons-first-law-button{
-	background: url("rocket.jpg");
-	background-position: center;
-	background-size:cover;
-	opacity: .85;
-
-}
-
-
-#else-button{
-	background-color:#0047b3;
-
-}
-
-#here-button{
-	background-color: #003d99;
-}
-
-
-
-
-
-
-@media (min-width:769px) {
-
-	.button {
-		flex-grow: 1;
-		flex-basis: 0;
-
-	}
-
-
-
-	.nav-container {
-  	display: flex;
-  	align-items: center;
-  	justify-content:space-around;
-  	align-items: stretch;
-  	text-align: center;
-  	vertical-align: middle;
-  	line-height: 20vh;
-
-	}
-
-.concept-button{
-	height: 15vh;
-	vertical-align:middle;
-	line-height: 8vh;
-
-	border-radius: 5px;
-  text-align: center;
-
-
-}
-
- .key-concepts{
-
-	 display: grid;
-	 grid-template-columns: 1fr 1fr 1fr;
-	 grid-template-rows: 1fr, 1fr;
-	 grid-gap: 15px 1px;
-
- }
-
-	.main-header {
-		display: flex;
-
-
-
-		}
-	.main-nav {
-		display: flex;
-	}
-	.main-header {
-		flex-direction: column;
-		align-items: center;
-
-
-
-
-
-	}
-
-
-}
-
-@media (min-width: 1025px) {
-
-	.main-header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-
-
-}

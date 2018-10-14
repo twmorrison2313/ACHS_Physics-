@@ -2,16 +2,27 @@
 
 
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+/* Set the width of the side navigation to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.3)";
+    document.getElementById("mySidenav").style.width = "200px";
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+/* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "#e8e9e9";
+}
+
+
+
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction(), myFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
 }
