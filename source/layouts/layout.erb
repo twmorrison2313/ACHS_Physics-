@@ -14,19 +14,21 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   </head>
-  <body>
+  <body class="<%= page_classes %>">
 
-    <header class="main-header">
+
+
+<header class="main-header main-header-2 main-header-3">
 
   <%= current_page.data.title %>
 
   	</header>
 
     <div class = 'main-nav' id="navbar">
-      <div id = "home"><a href="#home">Home</a></div>
-      <div><a href="#news">Current Units </a></div>
-    <div><a href="#contact">Key concepts</a></div>
-      <div><a href="#contact">Past Quarters</a></div>
+      <div id = "home"><a href="../../../index.html">Home</a></div>
+      <div><a href="pages/past_quarters.html">Past Quarters</a></div>
+      <div><a href="#key-concepts-divider">Key concepts</a></div>
+      <div><a href="">Current Units </a></div>
     </div>
 
 
